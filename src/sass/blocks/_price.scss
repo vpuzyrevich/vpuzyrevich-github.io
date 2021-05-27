@@ -24,6 +24,7 @@
     &__item {
         display: grid;
         grid-template: repeat(2, auto) / repeat(2, auto);
+        grid-auto-rows: minmax(45px, auto);
         grid-row: 5px;
         justify-content: space-between;
         &-cost {
