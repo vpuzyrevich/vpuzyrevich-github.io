@@ -1,6 +1,46 @@
+@media (max-width: 1439px) {
+    .sidepanel {
+        display: none;
+    }
+}
 @media (max-width: 1200px) {
     .container {
         max-width: 960px;
+    }
+    .sidepanel {
+        display: none;
+    }
+    .title {
+        &__fz30 {
+            font-size: 30px;
+        }
+    }
+    .about {
+        &__descr {
+            padding-right: 0;
+        }
+        &__skills {
+            column-gap: 20px;
+        }
+    }
+    .resume {
+        &__wrapper {
+            grid-template-columns: repeat(2,370px);
+            column-gap: 95px;
+        }
+    }
+    .skills {
+        &__wrapper {
+            justify-content: center;
+            grid-template-columns: repeat(3, 270px);
+            grid-template-rows: repeat(3, minmax(270px, auto));
+        }
+        &__progress {
+            justify-content: center;
+            grid-template: repeat(3, minmax(70px, auto)) / repeat(2, 350px);
+            row-gap: 40px;
+            column-gap: 65px;
+        }
     }
 }
 
@@ -8,16 +48,179 @@
     .container {
         max-width: 720px;
     }
+    .about {
+        &__photo {
+            width: 300px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &__descr {
+            width: 420px;
+            padding-left: 30px;
+        }
+        &__skills {
+            margin-top: 20px;
+            grid-template-columns: 390px;
+            grid-auto-rows: minmax(115px, auto);
+        }
+
+    }
+    .resume {
+        &__wrapper {
+            grid-template-columns: repeat(2,300px);
+            column-gap: 68px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+    .skills {
+        padding: 60px 5px 0 5px;
+        &__wrapper {
+            grid-template-columns: repeat(2, 270px);
+            grid-template-rows: repeat(4, minmax(270px, auto));
+        }
+        &__progress {
+            margin-top: 60px;
+            column-gap: 40px;
+        }
+    }
 }
 
 @media (max-width: 768px) {
     .container {
         max-width: 540px;
     }
+    .title {  
+        &_fz48 {
+            font-size: 28px;
+        }
+    }
+    .promo {
+        &__title {
+            line-height: 39px; 
+        }
+    }
+    .about {
+        padding-top: 40px;
+        &__wrapper {
+            // width: 300px;
+            flex-direction: column;
+            justify-content: center;
+        }
+        &__photo {
+            height: 340px;
+            width: 100%;
+        }
+        &__descr {
+            padding-top: 46px;
+            padding-left: 0;
+            width: 100%;
+        }
+        &__skills {
+            grid-template-columns: repeat(2, 260px);
+        }
+    }
+    .resume {
+        &__wrapper {
+            grid-template-columns: 1fr;
+            row-gap: 40px; 
+            column-gap: 60px;  
+        }
+        .title {
+            &__section-subtitle {
+                font-size: 28px;
+            }
+        }
+    }
+    .skills {
+        .title {
+            &__section-subtitle {
+                font-size: 28px;
+            }
+        }
+        &__wrapper {
+            gap: 10px;
+        }
+        &__progress {
+            grid-template: repeat(3, minmax(70px, auto)) / repeat(2, 270px);
+            column-gap: 10px;
+        }
+    }
 }
 
 @media (max-width: 576px) {
     .container {
         width: 100%;
+        padding: 0 10px;
+    }
+    .title {  
+        &_fz48 {
+            font-size: 26px;
+        }
+        &_fz24 {
+            font-size: 24px;
+        }
+    }
+    .hamburger {
+        right: 20px;
+    }
+    .menu {
+        &__block {
+            width: 250px;
+            padding-left: 20px;
+        }
+    }
+    .promo {
+        &__btns {
+            margin-top: 30px;
+        }
+    }
+    .about {
+        &__skills {
+            grid-template-columns: 1fr;
+        }  
+    }
+    .resume {
+        padding-top: 46px;
+        .title {
+            &__section-subtitle {
+                margin-top: 26px;
+                font-size: 24px;
+                line-height: 36px;
+            }
+        }
+        .divider {
+            margin-top: 15px;
+        }
+        &__wrapper {
+            padding: 40px 5px 0 5px;
+            // grid-template-columns: 300px;
+            row-gap: 40px;   
+        } 
+    }
+    .skills {
+        .title {
+            &__section-subtitle {
+                font-size: 24px;
+                line-height: 36px;
+                margin-top: 26px;
+            }
+        }
+        .divider {
+            margin-top: 15px;
+        }
+        &__wrapper {
+            margin-top: 20px;
+            grid-template-columns: 270px;
+            row-gap: 20px;
+        }
+        &__progress {
+            margin-top: 40px;
+            grid-template-columns: minmax(300px, auto);
+            
+        }
     }
 }
